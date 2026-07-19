@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       batch:
-        description: 'JSON array of owner/repo pairs'
+        description: 'JSON'
         required: false
         default: '[]'
         type: string
@@ -17,8 +17,5 @@ jobs:
   mint:
     runs-on: ubuntu-latest
     steps:
-      - name: Print inputs
-        run: |
-          echo "Inputs received"
-          echo "batch=${{ inputs.batch }}"
-          echo "purpose=${{ inputs.purpose }}"
+      - name: Hello
+        run: echo "Hello from mint job"
